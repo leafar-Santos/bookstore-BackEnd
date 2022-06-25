@@ -1,5 +1,6 @@
 package com.santos.bookstore.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,4 +22,9 @@ public class CategoriaService {
 				"Objeto não econtrado! Id: " + id + ", Tipo: " + Categoria.class.getName()));
 	}
 
+	
+	public List<Categoria>encontraTodasCategorias(){
+		return categoriaRepository.findAll();
+	}
+	
 }
